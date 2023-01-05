@@ -5,33 +5,44 @@
 
 #define ll long long
 
-#define TEST_MOD
+// #define TEST_MOD
 
 using namespace std;
 
-int solver(){
-    int ret_val=0;
-    
-    
-    return ret_val;
-}
-
-int main(){
-    fast
-    int t;
+int main() {
+    fast int t;
 #ifdef TEST_MOD
     t = 1;
 #else
     cin >> t;
 #endif
-    while(t--){
-        int inp1, inp2;
+    while (t--) {
+        int n, m;
 #ifdef TEST_MOD
-        inp1=2; inp2=4;
+        n = 6;
+        m = 6;
 #else
-        cin >> inp1 >> inp2;
+        cin >> n >> m;
 #endif
-        cout << inp2 << endl;
-        cout << solver(inp) << "\n";
+        // cout << n << endl;
+        // cout << m << endl;
+        string s1 = "1 0";
+        string s2 = "0 1";
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m / 2; j++) {
+                if (j % 2 == 0)
+                    cout << s1;
+                else
+                    cout << s2;
+                if (j != (m / 2 - 1))
+                    cout << " ";
+            }
+            cout << "\n";
+            if (i % 2 == 0) {
+                string tmp = s1;
+                s1 = s2;
+                s2 = tmp;
+            }
+        }
     }
 }
